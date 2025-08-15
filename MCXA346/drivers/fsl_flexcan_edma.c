@@ -367,7 +367,7 @@ status_t FLEXCAN_TransferReceiveEnhancedFifoEDMA(CAN_Type *base,
         /* Submit configuration. */
         (void)EDMA_SubmitTransfer(handle->rxFifoEdmaHandle, &dmaXferConfig);
 
-        /* 
+        /*
          * Set minor loop offset as minus Rx FIFO size (- (sizeof(uint32_t) * perReadWords)) to reset minor loop
          * address to orginal address 0x2000h when each minor loop complete.
          * Convert negative value to complement to avoid MISRA issue.

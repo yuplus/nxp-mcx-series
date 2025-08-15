@@ -2394,7 +2394,7 @@ static inline spc_dcdc_drive_strength_t SPC_GetLowPowerModeDCDCRegulatorDriveStr
  * @note To change DCDC level in Low-Power mode:
  *          1. Configure LP_CFG[DCDC_VDD_LVL] to desired level;
  *          2. Configure LP_CFG[DCDC_VDD_DS] to low driver strength;
- *  	    3. Configure ACTIVE_CFG[DCDC_VDD_LVL] to same level programmed in #1.
+ *          3. Configure ACTIVE_CFG[DCDC_VDD_LVL] to same level programmed in #1.
  *
  * @note After invoking this function, the voltage level in active mode(wakeup from low power modes) also changed,
  * if it is necessary, please invoke SPC_SetActiveModeDCDCRegulatorVoltageLevel() to change to desried voltage level.

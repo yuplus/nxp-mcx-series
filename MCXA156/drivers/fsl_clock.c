@@ -354,7 +354,7 @@ status_t CLOCK_SetupExtClocking(uint32_t iFreq)
  */
 status_t CLOCK_SetupExtRefClocking(uint32_t iFreq)
 {
-    
+
     if (iFreq > 50000000U)
     {
         return kStatus_InvalidArgument;

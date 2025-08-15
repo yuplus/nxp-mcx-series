@@ -71,7 +71,7 @@ void RESET_SetPeripheralReset(reset_ip_name_t peripheral)
     else
     {
      /* Added comments to prevent the violation of MISRA C-2012 rule 15.7 */
-    } 
+    }
     /* wait until it reads 0b1 */
     while (0u == ((*pResetCtrl) & bitMask))
     {
@@ -116,7 +116,7 @@ void RESET_ClearPeripheralReset(reset_ip_name_t peripheral)
     else
     {
      /* Added comments to prevent the violation of MISRA C-2012 rule 15.7 */
-    } 
+    }
     /* wait until it reads 0b0 */
     while (bitMask == ((*pResetCtrl) & bitMask))
     {

@@ -369,7 +369,7 @@ static inline uint32_t CTIMER_GetTimerCountValue(CTIMER_Type *base)
  * For example:
  * ctimer_callback_t ctimer_callback = pwm_match_callback;
  * CTIMER_RegisterCallBack(CTIMER, &ctimer_callback, kCTIMER_SingleCallback);
- * 
+ *
  * - Multiple Callback:
  * cb_func should be pointer to array of callback function pointers
  * Each element corresponds to Interrupt Flag in IR register.

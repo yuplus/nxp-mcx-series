@@ -43,7 +43,7 @@ static const CDOG_Type* s_cdogBases[] = CDOG_BASE_PTRS;
 static uint32_t CDOG_GetInstance(CDOG_Type *base)
 {
     uint32_t instance;
- 
+
     /* Find the instance index from base address mappings. */
     for (instance = 0; instance < ARRAY_SIZE(s_cdogBases); instance++)
     {
@@ -52,11 +52,11 @@ static uint32_t CDOG_GetInstance(CDOG_Type *base)
             break;
         }
     }
- 
+
     assert(instance < ARRAY_SIZE(s_cdogBases));
- 
+
     return instance;
-} 
+}
 
 /*!
  * brief Sets the default configuration of CDOG
@@ -318,7 +318,7 @@ status_t CDOG_Init(CDOG_Type *base, cdog_config_t *conf)
         CDOG_GetDefaultConfig(&default_conf);
 
         /* Write default value to CDOG->CONTROL*/
-        base->CONTROL = 
+        base->CONTROL =
             CDOG_CONTROL_TIMEOUT_CTRL(default_conf.timeout) |       /* Action if the timeout event is triggered  */
             CDOG_CONTROL_MISCOMPARE_CTRL(default_conf.miscompare) | /* Action if the miscompare error event is triggered  */
             CDOG_CONTROL_SEQUENCE_CTRL(default_conf.sequence) |     /* Action if the sequence error event is triggered  */

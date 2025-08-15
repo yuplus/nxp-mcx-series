@@ -266,7 +266,7 @@ typedef void EDMA_Type;
 /*!@brief EDMA base address convert macro */
 #define EDMA_CORE_BASE(base)
 #define EDMA_MP_BASE(base) ((edma_core_mp_t *)((uint32_t)(uint32_t *)(base)))
-#if defined EDMA_CHANNEL_ARRAY_STEPn 
+#if defined EDMA_CHANNEL_ARRAY_STEPn
 #define EDMA_CHANNEL_BASE(base, channel)                                          \
     ((edma_core_channel_t *)((uint32_t)(uint32_t *)(base) + EDMA_CHANNEL_OFFSET + \
                              EDMA_CHANNEL_ARRAY_STEPn(base, channel)))

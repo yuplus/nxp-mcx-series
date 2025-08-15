@@ -506,7 +506,7 @@ _Pragma("diag_suppress=Pm120")
  *
  * @note This section is applicable to cached memory only, say external sdram, cached ocram, etc.
  *       Please avoid to use this section for none-cached memory, say TCM.
- *       So only those targets, which utilize the cached memory, say flexspi_nor_sdram_debug, support 
+ *       So only those targets, which utilize the cached memory, say flexspi_nor_sdram_debug, support
  *       this kind of section.
  * @{
  */
@@ -1062,7 +1062,7 @@ static inline bool _SDK_AtomicLocalCompareAndSet1Byte(volatile uint8_t *addr, ui
     } while (__STREXB((newValue), (addr)));
 
     return true;
-    
+
 }
 
 static inline bool _SDK_AtomicLocalCompareAndSet2Byte(volatile uint16_t *addr, uint16_t expected, uint16_t newValue)
@@ -1142,7 +1142,7 @@ static inline bool _SDK_AtomicLocalCompareAndSet(uint32_t *addr, uint32_t expect
     uint32_t s_actual;
 
     s_atomicOldInt = DisableGlobalIRQ();
-    
+
     s_actual = *addr;
     if (s_actual == expected)
     {

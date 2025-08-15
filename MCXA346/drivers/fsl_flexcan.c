@@ -2385,7 +2385,7 @@ void FLEXCAN_SetTxMbConfig(CAN_Type *base, uint8_t mbIdx, bool enable)
  * as a Receive Message Buffer.
  * User should invoke this API when CTRL2[RRS]=1.
  * When CTRL2[RRS]=1, frame's ID is compared to the IDs of the receive mailboxes with the CODE field
- * configured as kFLEXCAN_RxMbEmpty, kFLEXCAN_RxMbFull or kFLEXCAN_RxMbOverrun. Message buffer will 
+ * configured as kFLEXCAN_RxMbEmpty, kFLEXCAN_RxMbFull or kFLEXCAN_RxMbOverrun. Message buffer will
  * store the remote frame in the same fashion of a data frame. No automatic remote response frame will
  * be generated. User need to setup another message buffer to respond remote request.
  *
@@ -2573,7 +2573,7 @@ void FLEXCAN_SetFDRxMbConfig(CAN_Type *base, uint8_t mbIdx, const flexcan_rx_mb_
  *
  * User should invoke this API when CTRL2[RRS]=0.
  * When CTRL2[RRS]=0, frame's ID is compared to the IDs of the receive mailboxes with the CODE field
- * configured as kFLEXCAN_RxMbRanswer. If there is a matching ID, then this mailbox content will be 
+ * configured as kFLEXCAN_RxMbRanswer. If there is a matching ID, then this mailbox content will be
  * transmitted as response. The received remote request frame is not stored in receive buffer. It is
  * only used to trigger a transmission of a frame in response.
  *

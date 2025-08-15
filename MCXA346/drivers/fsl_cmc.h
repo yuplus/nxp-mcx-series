@@ -33,8 +33,8 @@
 #define CMC_BLR_LOCK_IDX(index, value) \
     (((uint32_t)(((uint32_t)(value)) << CMC_BLR_LOCK_IDX_SHIFT(index))) & CMC_BLR_LOCK_IDX_MASK(index))
 #endif /* (defined(FSL_FEATURE_MCX_CMC_HAS_BSR_SCR_BIT) && FSL_FEATURE_MCX_CMC_HAS_BSR_SCR_BIT) */
-      
-      
+
+
 /*!
  * @brief CMC power mode Protection enumeration.
  */
@@ -733,7 +733,7 @@ static inline void CMC_SetBootRomStatus(CMC_Type *base, uint32_t statValue)
      assert((uint32_t)index < CMC_BSR_COUNT);
      return base->BSR[index];
  }
- 
+
  /*!
   * @brief Writes value to BootROM status register, in this way, BootROM status registers are used as general purpose
   * register.
@@ -768,7 +768,7 @@ static inline void CMC_SetBootRomStatus(CMC_Type *base, uint32_t statValue)
      assert((uint32_t)index < CMC_BSR_COUNT);
      base->BLR = ((base->BLR & ~CMC_BLR_LOCK_IDX_MASK(index)) | CMC_BLR_LOCK_IDX(index, 0x5UL));
  }
- 
+
  /*!
   * @brief Check if BootROM status register can be written.
   *

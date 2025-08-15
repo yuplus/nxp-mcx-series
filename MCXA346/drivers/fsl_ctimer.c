@@ -260,7 +260,7 @@ status_t CTIMER_SetupPwm(CTIMER_Type *base,
     /* Specified channel pwmPeriodChannel will define the PWM period */
     base->MR[pwmPeriodChannel] = period;
 
-    /* 
+    /*
      * Only occurs when duty cyle is 0 and PWM period is 0xFFFFFFFF.
      * CTimer cannot output 0% duty cyle PWM in this case.
      */
@@ -394,7 +394,7 @@ status_t CTIMER_UpdatePwmDutycycle(CTIMER_Type *base,
         pulsePeriod = ((uint64_t)period * (100U - (uint32_t)dutyCyclePercent)) / 100U;
     }
 
-    /* 
+    /*
      * Only occurs when duty cyle is 0 and PWM period is 0xFFFFFFFF.
      * CTimer cannot output 0% duty cyle PWM in this case.
      */
@@ -538,7 +538,7 @@ void CTIMER_SetupCapture(CTIMER_Type *base,
  * For example:
  * ctimer_callback_t ctimer_callback = pwm_match_callback;
  * CTIMER_RegisterCallBack(CTIMER, &ctimer_callback, kCTIMER_SingleCallback);
- * 
+ *
  * - Multiple Callback:
  * cb_func should be pointer to array of callback function pointers
  * Each element corresponds to Interrupt Flag in IR register.

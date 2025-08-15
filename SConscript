@@ -6,7 +6,10 @@ cwd  = GetCurrentDir()
 
 if GetDepend(['SOC_MCXA346']):
     objs = objs + SConscript('MCXA346/SConscript')
-    
+
+if GetDepend(['SOC_MCXA344']):
+    objs = objs + SConscript('MCXA344/SConscript')
+
 if GetDepend(['SOC_MCXA156']):
     objs = objs + SConscript('MCXA156/SConscript')
 

@@ -616,7 +616,7 @@ typedef enum _inputmux_connection_t
     kINPUTMUX_Lpi2c2SlaveEndOfPacketToTimer4Captsel     = 95U + (TIMER4CAPTSEL0 << PMUX_SHIFT),
     kINPUTMUX_Lpi2c3MasterEndOfPacketToTimer4Captsel    = 96U + (TIMER4CAPTSEL0 << PMUX_SHIFT),
     kINPUTMUX_Lpi2c3SlaveEndOfPacketToTimer4Captsel     = 97U + (TIMER4CAPTSEL0 << PMUX_SHIFT),
-     
+
     /*!< TIMER0 Trigger. */
     kINPUTMUX_CtimerInp0ToTimer0Trigger                 = 1U + (TIMER0TRIGIN << PMUX_SHIFT),
     kINPUTMUX_CtimerInp1ToTimer0Trigger                 = 2U + (TIMER0TRIGIN << PMUX_SHIFT),
@@ -1086,7 +1086,7 @@ typedef enum _inputmux_connection_t
     kINPUTMUX_Lpi2c2SlaveEndOfPacketToTimer4Trigger     = 95U + (TIMER4TRIGIN << PMUX_SHIFT),
     kINPUTMUX_Lpi2c3MasterEndOfPacketToTimer4Trigger    = 96U + (TIMER4TRIGIN << PMUX_SHIFT),
     kINPUTMUX_Lpi2c3SlaveEndOfPacketToTimer4Trigger     = 97U + (TIMER4TRIGIN << PMUX_SHIFT),
-        
+
     /*!< Selection for frequency measurement reference clock. */
     kINPUTMUX_ClkInToFreqmeasRef           = 1U + (FREQMEAS_REF_REG << PMUX_SHIFT),
     kINPUTMUX_FroOsc12MToFreqmeasRef       = 2u + (FREQMEAS_REF_REG << PMUX_SHIFT),

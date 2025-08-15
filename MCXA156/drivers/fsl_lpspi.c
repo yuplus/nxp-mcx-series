@@ -58,7 +58,7 @@ typedef struct _lpspi_transfer_blocking_param
     bool isTxMask;
     bool isPcsContinuous;
     uint8_t bytesEachWrite;
-    uint8_t bytesEachRead;    
+    uint8_t bytesEachRead;
     const uint8_t *txData;
     uint8_t *rxData;
     uint32_t rxRemainingByteCount;
@@ -301,7 +301,7 @@ void LPSPI_MasterInit(LPSPI_Type *base, const lpspi_master_config_t *masterConfi
     base->CR |= LPSPI_CR_RRF_MASK | LPSPI_CR_RTF_MASK;
     base->IER = 0U;
     base->CR  = 0U;
-    
+
     /* Disable LPSPI first */
     LPSPI_Enable(base, false);
 
@@ -371,7 +371,7 @@ void LPSPI_MasterGetDefaultConfig(lpspi_master_config_t *masterConfig)
     masterConfig->cpha         = kLPSPI_ClockPhaseFirstEdge;
     masterConfig->direction    = kLPSPI_MsbFirst;
 #if !(defined(FSL_FEATURE_LPSPI_HAS_NO_PCSCFG) && FSL_FEATURE_LPSPI_HAS_NO_PCSCFG)
-    masterConfig->pcsFunc            = kLPSPI_PcsAsCs; 
+    masterConfig->pcsFunc            = kLPSPI_PcsAsCs;
 #endif
 
     masterConfig->pcsToSckDelayInNanoSec        = (1000000000U / masterConfig->baudRate) / 2U;
@@ -2235,7 +2235,7 @@ void LPSPI_SlaveTransferHandleIRQ(LPSPI_Type *base, lpspi_slave_handle_t *handle
             handle->state = (uint8_t)kLPSPI_Error;
         }
         handle->errorCount++;
-        /* ERR051588: Clear FIFO after underrun occurs */   
+        /* ERR051588: Clear FIFO after underrun occurs */
         LPSPI_FlushFifo(base, true, false);
     }
     /* Catch rx fifo overflow conditions, service only if rx over flow interrupt enabled */
