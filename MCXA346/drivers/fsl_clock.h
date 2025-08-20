@@ -280,7 +280,7 @@ typedef enum _clock_ip_name
 /*! @brief Clock ip name array for PORT. */
 #define PORT_CLOCKS                                                                                \
     {                                                                                              \
-        kCLOCK_GatePORT0, kCLOCK_GatePORT1, kCLOCK_GatePORT2, kCLOCK_GatePORT3, kCLOCK_GatePORT4 \ \
+        kCLOCK_GatePORT0, kCLOCK_GatePORT1, kCLOCK_GatePORT2, kCLOCK_GatePORT3, kCLOCK_GatePORT4   \
     }
 /*! @brief Clock ip name array for QDC. */
 #define QDC_CLOCKS                       \
