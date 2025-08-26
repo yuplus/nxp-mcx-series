@@ -19,6 +19,9 @@ if GetDepend(['SOC_MCXA153']):
 if GetDepend(['SOC_MCXC444']):
     objs = objs + SConscript('MCXC444/SConscript')
 
+if GetDepend(['SOC_MCXE247']):
+    objs = objs + SConscript('MCXE247/SConscript')
+
 if GetDepend(['SOC_MCXN236']):
     objs = objs + SConscript('MCXN236/SConscript')
 
